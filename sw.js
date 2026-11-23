@@ -1,4 +1,4 @@
-const CACHE="research-shell-72a93f0b-5fb9-4090-8ee2-ec2086509b69", FILES=["./","./index.html","./app-config.json","./app-icon-256.png","./app-icon-512.png","./manifest.webmanifest","./workspace-9f60e9b83e25997d.css","./workspace-d4b3ad5c98010f86.js"];
+const CACHE="research-shell-9c38b7a1-db75-494c-b53f-8652444b8154", FILES=["./","./index.html","./app-config.json","./app-icon-256.png","./app-icon-512.png","./manifest.webmanifest","./workspace-6229124386e432b1.js","./workspace-7fb17be873f54be0.css"];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('research-shell-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch', event=>{
