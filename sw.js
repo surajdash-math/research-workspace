@@ -1,4 +1,4 @@
-const CACHE="research-shell-03e7e7a2-a0bc-4208-9646-604213ee0edc", FILES=["./","./index.html","./index-03e7e7a2-a0bc-4208-9646-604213ee0edc.html","./app-config.json","./app-icon-256.png","./app-icon-512.png","./bibliotheca-banner.png","./manifest.webmanifest","./workspace-263b256523c5d1c7.css","./workspace-55c8cc77652b7182.js"];
+const CACHE="research-shell-41f6e092-dfd5-4aa1-af5a-7d6473b20072", FILES=["./","./index.html","./index-41f6e092-dfd5-4aa1-af5a-7d6473b20072.html","./app-config.json","./app-icon-256.png","./app-icon-512.png","./bibliotheca-banner.png","./manifest.webmanifest","./workspace-33282766c7075881.css","./workspace-9fff02f7d156f352.js"];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES.map(file=>new Request(new URL(file,self.registration.scope),{cache:'reload'})))).then(()=>self.skipWaiting())));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('research-shell-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch', event=>{
