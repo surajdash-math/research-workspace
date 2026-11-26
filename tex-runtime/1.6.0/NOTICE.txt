@@ -1,0 +1,2 @@
+TikZJax 1.6.0, GPL-3.0-or-later. Source: https://github.com/rod2ik/tikzjax
+Research Workspace modifies run-tex.js and run-tex.min.js to accept gzip files already decoded by the HTTP transport. The build helper contains the exact modification.
